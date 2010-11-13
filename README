@@ -1,0 +1,40 @@
+README
+======
+
+This is an (incomplete) implementation of GAL, the Genetic Automaton Learner as 
+defined in Chapter 5 of Belz (2000).
+
+The point of this code is to learn a FSA that *generalizes* from a set of positive
+examples. (If you just want to cover exactly the input, you can use any existing
+package for doing FSA minimization.)
+
+The input file is in text format, one sequence per line, the alphabet will be induced
+by tokens separated by white-spaces.
+
+This project currently builds under Eclipse, feel free to contribute an ant script.
+
+
+To run an example, use the LearnFSA run configuration in run_config/
+
+To create a graph from the output, install the package graphviz and use
+
+  dot -Tpng best-instance.dot > best-instance.png
+  
+Take a look at the PNG in the repository for an example of the learned automata.
+
+Edit the default.properties to get better goodness of fit. Read chapter 5 of Belz (2000)
+for more details and for further ideas about how to improve it. Patches are welcomed.
+
+Pablo Duboue, November 2010
+
+
+
+
+References
+
+Belz, Anja (2000) "Computational Learning of Finite-State Models for 
+Natural Language Processing", PhD Thesis, University of Sussex.
+
+
+
+
